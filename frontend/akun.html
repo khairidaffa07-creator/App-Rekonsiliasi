@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akun Kas dan Bank</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Dashboard</a>
+    <a href="akun.html">Akun Kas/Bank</a>
+    <a href="transaksi.html">Transaksi Kas</a>
+    <a href="mutasi-bank.html">Mutasi Bank</a>
+    <a href="rekonsiliasi.html">Rekonsiliasi</a>
+</nav>
+
+<main>
+
+<h2>Akun Kas dan Bank</h2>
+
+<form id="akunForm">
+
+    <input
+        type="text"
+        id="namaAkun"
+        placeholder="Nama akun"
+        required
+    >
+
+    <select id="jenisAkun" required>
+
+        <option value="">Pilih jenis</option>
+
+        <option value="KAS">
+            Kas
+        </option>
+
+        <option value="BANK">
+            Bank
+        </option>
+
+    </select>
+
+    <input
+        type="text"
+        id="nomorRekening"
+        placeholder="Nomor rekening"
+    >
+
+    <input
+        type="text"
+        id="namaBank"
+        placeholder="Nama bank"
+    >
+
+    <input
+        type="number"
+        id="saldoAwal"
+        placeholder="Saldo awal"
+        value="0"
+    >
+
+    <button type="submit">
+        Simpan
+    </button>
+
+</form>
+
+<hr>
+
+<table>
+
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Nama Akun</th>
+    <th>Jenis</th>
+    <th>Bank</th>
+    <th>No Rekening</th>
+    <th>Saldo Awal</th>
+</tr>
+</thead>
+
+<tbody id="akunTable"></tbody>
+
+</table>
+
+</main>
+
+<script src="js/akun.js"></script>
+
+</body>
+</html>
